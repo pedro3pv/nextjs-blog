@@ -11,5 +11,8 @@ export type Post = {
     url: string;
   };
   content: string;
-  preview?: boolean;
+  lastEditDate?: string;
+  lastEditor?: Author;
+  lastComment?: string;
+  commentCreatedAt?: string;
 };
