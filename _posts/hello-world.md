@@ -5,13 +5,13 @@ coverImage: "/placeholder.svg?height=630&width=1200"
 date: "2024-01-15T10:00:00.000Z"
 author:
   name: "João Silva"
-  picture: "/placeholder.svg?height=100&width=100"
+  picture: "https://placehold.co/100x100"
 ogImage:
   url: "/placeholder.svg?height=630&width=1200"
 lastEditDate: "2024-01-20T15:30:00.000Z"
 lastEditor:
   name: "Maria Santos"
-  picture: "/placeholder.svg?height=100&width=100"
+  picture: "https://placehold.co/100x100"
 lastComment: "Correção de gramática e adição de exemplos práticos"
 commentCreatedAt: "2024-01-15T10:30:00.000Z"
 ---
