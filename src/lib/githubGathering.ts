@@ -18,7 +18,7 @@ const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN, // O token deve estar definido no arquivo .env
 });
 
-async function getFileCommitHistory(
+export async function getFileCommitHistory(
   owner: string,
   repo: string,
   path: string
