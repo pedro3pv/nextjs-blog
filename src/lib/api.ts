@@ -27,21 +27,22 @@ export async function getPostBySlug(slug: string) {
 
   return {
     ...data,
+    date: githubInfo?.creator?.date,
     slug: realSlug,
     content,
     author: githubInfo?.creator
       ? {
-        name: githubInfo.creator.name,
-        picture: `https://github.com/${githubInfo.creator.name}.png`
-      }
+          name: githubInfo.creator.name,
+          picture: `https://github.com/${githubInfo.creator.username}.png`
+        }
       : undefined,
     lastEditDate: githubInfo?.lastEditor?.date,
     lastEditor: githubInfo?.lastEditor
       ? {
-        name: githubInfo.lastEditor.name,
-        picture: `https://github.com/${githubInfo.lastEditor.name}.png`
-      }
-      : undefined
+          name: githubInfo.lastEditor.name,
+          picture: `https://github.com/${githubInfo.lastEditor.username}.png`
+        }
+      : undefined,
   } as Post;
 }
 
