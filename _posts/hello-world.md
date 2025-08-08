@@ -1,19 +1,63 @@
 ---
-title: "Learn How to Pre-render Pages Using Static Generation with Next.js"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/hello-world/cover.jpg"
-date: "2020-03-16T05:35:07.322Z"
+title: "Como Criar um Blog Moderno com Next.js"
+excerpt: "Aprenda a construir um blog pessoal moderno usando Next.js, TypeScript e uma paleta de cores sofisticada baseada em teoria das cores."
+coverImage: "/placeholder.svg?height=630&width=1200"
+date: "2024-01-15T10:00:00.000Z"
 author:
-  name: Tim Neutkens
-  picture: "/assets/blog/authors/tim.jpeg"
+  name: "João Silva"
+  picture: "/placeholder.svg?height=100&width=100"
 ogImage:
-  url: "/assets/blog/hello-world/cover.jpg"
+  url: "/placeholder.svg?height=630&width=1200"
+lastEditDate: "2024-01-20T15:30:00.000Z"
+lastEditor:
+  name: "Maria Santos"
+  picture: "/placeholder.svg?height=100&width=100"
+lastComment: "Correção de gramática e adição de exemplos práticos"
+commentCreatedAt: "2024-01-15T10:30:00.000Z"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+# Introdução
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-## Lorem Ipsum
+## Por que Next.js?
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+### Vantagens do Framework
+
+- **Performance otimizada**: Server-side rendering e static generation
+- **SEO amigável**: Metadata automática e otimizações built-in
+- **Developer Experience**: Hot reload, TypeScript support, e muito mais
+
+## Implementação
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+```typescript
+// Exemplo de código
+export default function BlogPost() {
+  return (
+    <article>
+      <h1>Meu Post</h1>
+      <p>Conteúdo do post...</p>
+    </article>
+  );
+}
+```
+
+> **Dica importante**: Sempre teste seu blog em diferentes dispositivos para garantir uma experiência responsiva.
+
+## Conclusão
+
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+**Próximos passos:**
+1. Configurar sistema de comentários
+2. Implementar busca avançada
+3. Adicionar analytics
+4. Otimizar para SEO
+
+---
+
+*Este post foi criado como exemplo para demonstrar o layout e funcionalidades do blog pessoal.*
