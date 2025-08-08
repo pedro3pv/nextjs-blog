@@ -16,7 +16,7 @@ interface FileHistoryInfo {
 
 // Configure com seu token de acesso pessoal para evitar limites de taxa
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN, // O token deve estar definido no arquivo .env
+  auth: process.env.TOKEN_GITHUB, // O token deve estar definido no arquivo .env
 });
 
 export async function getFileCommitHistory(
