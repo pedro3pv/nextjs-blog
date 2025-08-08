@@ -3,6 +3,7 @@ import { Octokit } from "octokit";
 // Definição da interface para o objeto de retorno
 interface FileCommitInfo {
   name: string | undefined;
+  username: string | undefined;
   date: string | undefined;
   sha: string;
 }
@@ -15,7 +16,7 @@ interface FileHistoryInfo {
 
 // Configure com seu token de acesso pessoal para evitar limites de taxa
 const octokit = new Octokit({
-    auth: process.env.GITHUB_TOKEN, // O token deve estar definido no arquivo .env
+  auth: process.env.GITHUB_TOKEN, // O token deve estar definido no arquivo .env
 });
 
 export async function getFileCommitHistory(
@@ -35,26 +36,31 @@ export async function getFileCommitHistory(
       return null; // Retorna null se não encontrar commits
     }
 
-    // O primeiro commit na lista é o mais recente (última edição)
-    const lastCommit = commits[0];
+    // Ordena os commits por data usando quicksort (do mais antigo para o mais recente)
+    const sortedCommits = commits
 
-    // O último commit na lista é o mais antigo (criação do arquivo)
-    const firstCommit = commits[commits.length - 1];
+    // O primeiro commit ordenado é o mais antigo (criação do arquivo)
+    const lastCommit = sortedCommits[0];
+
+    // O último commit ordenado é o mais recente (última edição)
+    const firstCommit = sortedCommits[sortedCommits.length - 1];
 
     // Monta o objeto de retorno
     const historyInfo: FileHistoryInfo = {
       file: path,
       creator: {
         name: firstCommit.commit.author?.name || firstCommit.author?.login,
+        username: firstCommit.author?.login,
         date: firstCommit.commit.author?.date,
         sha: firstCommit.sha,
       },
       lastEditor: {
         name: lastCommit.commit.author?.name || lastCommit.author?.login,
+        username: lastCommit.author?.login,
         date: lastCommit.commit.author?.date,
         sha: lastCommit.sha,
       },
-    };
+    } as FileHistoryInfo
 
     return historyInfo;
   } catch (error) {
