@@ -17,9 +17,9 @@ export default function Header() {
             className="w-8 h-8 rounded-full flex items-center justify-center"
             style={{ backgroundColor: "#313131" }}
           >
-            <span className="text-white font-bold text-sm">B</span>
+            <span className="text-white font-bold text-sm">P</span>
           </div>
-          <span className="text-xl font-semibold text-white">Blog Pessoal</span>
+          {/* <span className="text-xl font-semibold text-white"></span> */}
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
