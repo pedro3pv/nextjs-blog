@@ -61,7 +61,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = `${post.title} | Blog Pessoal`;
+  const title = `${post.title} | ${post.author.name}`;
 
   return {
     title,
