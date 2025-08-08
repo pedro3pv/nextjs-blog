@@ -64,9 +64,9 @@ export function Intro() {
             }}
             asChild
           >
-            <Link href="/about">
+            {/* <Link href="/about">
               Sobre Mim
-            </Link>
+            </Link> */}
           </Button>
         </div>
 
