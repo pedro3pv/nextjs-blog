@@ -59,14 +59,14 @@ export function PostMetadata({
               <p className="text-xs font-medium uppercase tracking-wider" style={{ color: "#858c8c" }}>
                 Criador
               </p>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center">
                 <Avatar name={creator.name} picture={creator.picture} size="sm" />
                 <p className="text-sm text-white">{creator.name}</p>
               </div>
             </div>
           </div>
 
-          {commentCreatedAt && (
+          {/* {commentCreatedAt && (
             <div className="flex items-center space-x-3">
               <div 
                 className="w-8 h-8 rounded-full flex items-center justify-center"
@@ -83,7 +83,7 @@ export function PostMetadata({
                 </p>
               </div>
             </div>
-          )}
+          )} */}
         </div>
 
         {/* Informações de Edição */}
@@ -92,7 +92,7 @@ export function PostMetadata({
             <div className="flex items-center space-x-3">
               <div 
                 className="w-8 h-8 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: "#b25959" }}
+                style={{ backgroundColor: "#4772b2" }}
               >
                 <Clock className="h-4 w-4 text-white" />
               </div>
@@ -111,7 +111,7 @@ export function PostMetadata({
             <div className="flex items-center space-x-3">
               <div 
                 className="w-8 h-8 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: "#4772b2" }}
+                style={{ backgroundColor: "#4e994c" }}
               >
                 <Edit3 className="h-4 w-4 text-white" />
               </div>
@@ -119,7 +119,7 @@ export function PostMetadata({
                 <p className="text-xs font-medium uppercase tracking-wider" style={{ color: "#858c8c" }}>
                   Quem Comentou a Última Edição
                 </p>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center">
                   <Avatar name={lastEditor.name} picture={lastEditor.picture} size="sm" />
                   <p className="text-sm text-white">{lastEditor.name}</p>
                 </div>
@@ -127,7 +127,7 @@ export function PostMetadata({
             </div>
           )}
 
-          {lastComment && (
+          {/* {lastComment && (
             <div className="flex items-center space-x-3">
               <div 
                 className="w-8 h-8 rounded-full flex items-center justify-center"
@@ -144,7 +144,7 @@ export function PostMetadata({
                 </p>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>
