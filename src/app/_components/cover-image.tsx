@@ -8,12 +8,12 @@ type Props = {
   slug?: string;
 };
 
-const CoverImage = ({ title, src, slug }: Props) => {
+export default function CoverImage({ title, src, slug }: Props) {
   const image = (
     <Image
-      src={src}
+      src={src || "/placeholder.svg"}
       alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm w-full", {
+      className={cn("shadow-sm w-full rounded-2xl", {
         "hover:shadow-lg transition-shadow duration-200": slug,
       })}
       width={1300}
@@ -23,7 +23,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
+        <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
           {image}
         </Link>
       ) : (
@@ -31,6 +31,4 @@ const CoverImage = ({ title, src, slug }: Props) => {
       )}
     </div>
   );
-};
-
-export default CoverImage;
+}
