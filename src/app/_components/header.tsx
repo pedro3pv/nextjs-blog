@@ -31,7 +31,7 @@ export default function Header() {
             <Home className="h-4 w-4" />
             <span>Início</span>
           </Link>
-          <Link
+          {/* <Link
             href="/about"
             className="text-sm font-medium hover:text-white transition-colors flex items-center space-x-2"
             style={{ color: "#bfbbb5" }}
@@ -46,24 +46,24 @@ export default function Header() {
           >
             <Mail className="h-4 w-4" />
             <span>Contato</span>
-          </Link>
+          </Link> */}
         </nav>
 
         <div className="flex items-center space-x-4">
           <Link
-            href="https://github.com"
+            href="https://github.com/pedro3pv"
             className="hover:text-white transition-colors"
             style={{ color: "#bfbbb5" }}
           >
             <Github className="h-5 w-5" />
           </Link>
-          <Link
+          {/* <Link
             href="https://linkedin.com"
             className="hover:text-white transition-colors"
             style={{ color: "#bfbbb5" }}
           >
             <Linkedin className="h-5 w-5" />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>
