@@ -136,11 +136,6 @@
   background-color: rgba(30, 30, 30, 0.2);
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Focus styles for accessibility */
 .markdown h1:focus,
 .markdown h2:focus,
