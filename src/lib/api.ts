@@ -19,30 +19,41 @@ export async function getPostBySlug(slug: string) {
   // Exemplo de função fictícia para obter informações do GitHub
   // Implemente getFileCommitHistory conforme sua necessidade
   // Aqui está um mock para ilustrar:
-  const githubInfo = await getFileCommitHistory(
-    "pedro3pv", // substitua pelo owner do seu repo
-    "nextjs-blog", // substitua pelo nome do seu repo
-    `_posts/${realSlug}.md` // ajuste o caminho conforme sua estrutura
-  );
+  let githubInfo = undefined;
+  try {
+    githubInfo = await getFileCommitHistory(
+      "pedro3pv", // substitua pelo owner do seu repo
+      "nextjs-blog", // substitua pelo nome do seu repo
+      `_posts/${realSlug}.md` // ajuste o caminho conforme sua estrutura
+    );
+  } catch (e) {
+    // Falha ao buscar histórico, segue sem info do github
+    githubInfo = undefined;
+  }
 
   return {
     ...data,
-    date: githubInfo?.creator?.date,
+    date: githubInfo?.creator?.date ?? data.date ?? null,
     slug: realSlug,
     content,
-    author: githubInfo?.creator
-      ? {
-          name: githubInfo.creator.name,
-          picture: `https://github.com/${githubInfo.creator.username}.png`
-        }
-      : undefined,
-    lastEditDate: githubInfo?.lastEditor?.date,
-    lastEditor: githubInfo?.lastEditor
-      ? {
-          name: githubInfo.lastEditor.name,
-          picture: `https://github.com/${githubInfo.lastEditor.username}.png`
-        }
-      : undefined,
+    author:
+      githubInfo && githubInfo.creator && githubInfo.creator.name && githubInfo.creator.username
+        ? {
+            name: githubInfo.creator.name,
+            picture: `https://github.com/${githubInfo.creator.username}.png`
+          }
+        : {
+            name: "Erro ao buscar autor",
+            picture: "/assets/blog/authors/joe.jpeg"
+          },
+    lastEditDate: githubInfo?.lastEditor?.date ?? null,
+    lastEditor:
+      githubInfo && githubInfo.lastEditor && githubInfo.lastEditor.name && githubInfo.lastEditor.username
+        ? {
+            name: githubInfo.lastEditor.name,
+            picture: `https://github.com/${githubInfo.lastEditor.username}.png`
+          }
+        : undefined,
   } as Post;
 }
 
